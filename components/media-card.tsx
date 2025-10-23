@@ -139,7 +139,9 @@ export function MediaCard({
               )}
               {/* Actual image */}
               <img
-                src={"https://lightspeed.ac/?url=" + imageUrl}
+                // There is no need to proxy private userdata through a third party proxy
+                // src={"https://lightspeed.ac/?url=" + imageUrl}
+                src={imageUrl}
                 alt={item.Name || ""}
                 className={`w-full h-full object-cover transition-opacity duration-300 shadow-lg shadow-sm group-hover:shadow-md ${
                   progressPercentage > 0 ? "rounded-t-md" : "rounded-md"
